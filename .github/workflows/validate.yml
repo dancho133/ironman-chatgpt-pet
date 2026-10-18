@@ -1,0 +1,37 @@
+name: Validate Pets Spritesheet
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    name: Spritesheet Geometry & Transparency Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate v2 Spritesheet (PNG)
+        run: |
+          python scripts/validate_spritesheet.py assets/ironman_funko_anime_v2_spritesheet.png --v2
+
+      - name: Validate v2 Spritesheet (WebP)
+        run: |
+          python scripts/validate_spritesheet.py assets/ironman_funko_anime_v2_spritesheet.webp --v2
+
+      - name: Validate v1 Spritesheet (PNG)
+        run: |
+          python scripts/validate_spritesheet.py assets/ironman_funko_anime_v1_spritesheet.png --v1
