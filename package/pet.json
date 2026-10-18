@@ -1,0 +1,32 @@
+{
+  "id": "ironman-funko-v2",
+  "name": "Iron Man",
+  "displayName": "Iron Man (Tony Stark) 3D Funko Anime",
+  "description": "3D Funko Pop & Anime Nendoroid Iron Man (Tony Stark) with reactive repulsors and v2 cursor tracking.",
+  "version": "2.0.0",
+  "format": "v2",
+  "author": "Danial (@dancho133)",
+  "repository": "https://github.com/dancho133/ironman-chatgpt-pet",
+  "shareUrl": "https://chatgpt.com/s/sharepet_6ad48e2159088191a19a5b11b898c6c1",
+  "spritesheetPath": "spritesheet.png",
+  "tags": [
+    "ironman",
+    "marvel",
+    "funko",
+    "nendoroid",
+    "tony-stark",
+    "3d",
+    "anime",
+    "v2-cursor-tracking"
+  ],
+  "grid": {
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "totalWidth": 1536,
+    "totalHeight": 2288,
+    "activeFrames": 73,
+    "emptyCells": 15
+  }
+}
